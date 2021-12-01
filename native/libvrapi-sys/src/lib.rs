@@ -57,8 +57,8 @@ pub unsafe fn vrapi_DefaultModeParms(java: *const ovrJava) -> ovrModeParms {
     let mut parms: ovrModeParms = mem::zeroed();
 
     parms.Type = ovrStructureType__VRAPI_STRUCTURE_TYPE_MODE_PARMS;
-    parms.Flags |= ovrModeFlags__VRAPI_MODE_FLAG_ALLOW_POWER_SAVE;
     parms.Flags |= ovrModeFlags__VRAPI_MODE_FLAG_RESET_WINDOW_FULLSCREEN;
+    parms.Flags |= ovrModeFlags__VRAPI_MODE_FLAG_FRONT_BUFFER_SRGB;
     parms.Java = *java;
 
     parms

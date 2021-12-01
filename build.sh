@@ -3,7 +3,7 @@ PATH=$ANDROID_HOME/build-tools/28.0.3:$PATH
 PATH=$NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH
 
 pushd native >/dev/null
-    cargo build
+    rustup run nightly cargo build
 popd >/dev/null
 if [ -d build ]; then
     rm -rf build
